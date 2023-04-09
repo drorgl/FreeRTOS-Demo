@@ -1,15 +1,35 @@
 {
     "$schema": "https://raw.githubusercontent.com/platformio/platformio-core/develop/platformio/assets/schema/library.json",
     "name": "FreeRTOS-Kernel",
+    "license": "MIT",
     "version": "10.5.1",
     "build": {
-        "flags": [
-            "-I portable/MSVC-MingW"
-        ],
-        "srcFilter":[
-            "+<*.c>",
-            "+<portable/MemMang/heap_5.c>",
-            "+<portable/MSVC-MingW/*.c>"
-        ]
+        "extraScript": "scripts/build_settings.py",
+        "environments": {
+            "native-win32": {
+                "flags": [
+                    "-I portable/MSVC-MingW -lwinmm"
+                ],
+                "srcFilter": [
+                    "+<portable/MSVC-MingW/*.c>"
+                ]
+            },
+            "native-posix": {
+                "flags": [
+                    "-I portable/ThirdParty/GCC/Posix"
+                ],
+                "srcFilter": [
+                    "+<portable/ThirdParty/GCC/Posix/**/*.c>"
+                ]
+            },
+            "common": {
+                "srcFilter": [
+                    "+<*.c>",
+                    "+<portable/MemMang/heap_5.c>"
+                ]
+            }
+        },
+        "includeDir": "./include",
+        "srcDir": "./"
     }
 }
