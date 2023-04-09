@@ -8,7 +8,8 @@
         "environments": {
             "native-win32": {
                 "flags": [
-                    "-I portable/MSVC-MingW -lwinmm"
+                    "-I portable/MSVC-MingW",
+                    "-lwinmm"
                 ],
                 "srcFilter": [
                     "+<portable/MSVC-MingW/*.c>"
