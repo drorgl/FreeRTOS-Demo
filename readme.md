@@ -1,8 +1,6 @@
 # FreeRTOS Windows Demo
 This is a windows demo based on [FreeRTOS Demo](https://github.com/FreeRTOS/FreeRTOS/tree/main/FreeRTOS/Demo/Posix_GCC) for executing FreeRTOS simple simulation
 
-This demo is based on 
-
 # Execute
 ```bash
 pio run -t exec
