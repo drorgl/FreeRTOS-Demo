@@ -1,0 +1,15 @@
+{
+    "$schema": "https://raw.githubusercontent.com/platformio/platformio-core/develop/platformio/assets/schema/library.json",
+    "name": "FreeRTOS-Kernel",
+    "version": "10.5.1",
+    "build": {
+        "flags": [
+            "-I portable/MSVC-MingW"
+        ],
+        "srcFilter":[
+            "+<*.c>",
+            "+<portable/MemMang/heap_5.c>",
+            "+<portable/MSVC-MingW/*.c>"
+        ]
+    }
+}
