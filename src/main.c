@@ -124,6 +124,4 @@ int main( void ){
         printf("Starting Scheduler...\r\n");
         vTaskStartScheduler();
         printf("Before End\r\n");
-        // while(1){}
-
 }
